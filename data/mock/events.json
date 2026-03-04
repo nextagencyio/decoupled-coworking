@@ -1,0 +1,141 @@
+{
+  "data": {
+    "nodeEvents": {
+      "__typename": "NodeEventConnection",
+      "nodes": [
+        {
+          "__typename": "NodeEvent",
+          "id": "event-pitch",
+          "title": "Startup Pitch Night",
+          "path": "/events/startup-pitch-night",
+          "body": {
+            "processed": "<p>Five early-stage startups pitch their ideas to a panel of local investors, mentors, and fellow entrepreneurs. Each founder gets 5 minutes to present followed by 3 minutes of Q&A. Networking with appetizers and drinks follows the pitches.</p><h2>Why Attend</h2><ul><li>Discover innovative local startups</li><li>Network with investors and founders</li><li>Get inspired by entrepreneurial energy</li><li>Enjoy complimentary food and drinks</li></ul>",
+            "summary": "Five early-stage startups pitch their ideas to a panel of local investors, mentors, and fellow entrepreneurs. Each founder gets 5 minutes to present followed by 3 minutes of Q&A. Networking with appet"
+          },
+          "eventDate": {
+            "timestamp": 1775862000
+          },
+          "endDate": {
+            "timestamp": 1775872800
+          },
+          "location": "Hive Works Event Space",
+          "openToPublic": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80",
+            "alt": "Startup pitch presentation",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeEvent",
+          "id": "event-workshop",
+          "title": "AI Tools for Productivity Workshop",
+          "path": "/events/ai-tools-workshop",
+          "body": {
+            "processed": "<p>A hands-on workshop exploring the latest AI tools that can supercharge your workflow. Learn practical applications of AI for writing, coding, design, data analysis, and project management. Bring your laptop and leave with actionable skills you can use immediately.</p><h2>Topics Covered</h2><ul><li>AI writing assistants for content creation</li><li>Code generation and debugging with AI</li><li>Automated data analysis workflows</li><li>AI-powered design tools</li><li>Prompt engineering best practices</li></ul>",
+            "summary": "A hands-on workshop exploring the latest AI tools that can supercharge your workflow. Learn practical applications of AI for writing, coding, design, data analysis, and project management. Bring your "
+          },
+          "eventDate": {
+            "timestamp": 1776884400
+          },
+          "endDate": {
+            "timestamp": 1776895200
+          },
+          "location": "Hive Works Boardroom",
+          "openToPublic": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
+            "alt": "Workshop with laptops and participants",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeEvent",
+          "id": "event-happy-hour",
+          "title": "Monthly Member Happy Hour",
+          "path": "/events/monthly-happy-hour",
+          "body": {
+            "processed": "<p>Unwind, connect, and celebrate another month of great work with your fellow Hive members. Local craft beer, wine, and non-alcoholic options provided. This is where some of the best collaborations at Hive Works have started.</p><p>Every last Friday of the month. No RSVP needed, just show up and be social!</p>",
+            "summary": "Unwind, connect, and celebrate another month of great work with your fellow Hive members. Local craft beer, wine, and non-alcoholic options provided. This is where some of the best collaborations at H"
+          },
+          "eventDate": {
+            "timestamp": 1777068000
+          },
+          "endDate": {
+            "timestamp": 1777075200
+          },
+          "location": "Hive Works Kitchen & Lounge",
+          "openToPublic": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+            "alt": "Coworking members socializing",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

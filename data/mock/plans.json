@@ -1,0 +1,138 @@
+{
+  "data": {
+    "nodePlans": {
+      "__typename": "NodePlanConnection",
+      "nodes": [
+        {
+          "__typename": "NodePlan",
+          "id": "plan-hot-desk",
+          "title": "Hot Desk",
+          "path": "/plans/hot-desk",
+          "body": {
+            "processed": "<p>Flexible, first-come seating in our open workspace. Perfect for freelancers and remote workers who need a professional environment without a fixed commitment. Grab any open desk, plug in, and get to work.</p>",
+            "summary": "Flexible, first-come seating in our open workspace. Perfect for freelancers and remote workers who need a professional environment without a fixed commitment. Grab any open desk, plug in, and get to w"
+          },
+          "priceMonthly": "$199/mo",
+          "includes": {
+            "processed": "<ul><li>Access during business hours (8 AM - 6 PM, Mon-Fri)</li><li>High-speed WiFi</li><li>Unlimited coffee, tea, and filtered water</li><li>2 hours of meeting room time per month</li><li>Access to community events</li><li>Mail handling</li></ul>",
+            "summary": "Access during business hours (8 AM - 6 PM, Mon-Fri)High-speed WiFiUnlimited coffee, tea, and filtered water2 hours of meeting room time per monthAccess to community eventsMail handling"
+          },
+          "featured": false,
+          "idealFor": "Freelancers & Remote Workers",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+            "alt": "Open coworking space with hot desks",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodePlan",
+          "id": "plan-dedicated",
+          "title": "Dedicated Desk",
+          "path": "/plans/dedicated-desk",
+          "body": {
+            "processed": "<p>Your own personal workspace that is always waiting for you. Leave your monitor, plants, and personal items on your desk knowing it is reserved exclusively for you. The best of both worlds -- your own space within a community.</p>",
+            "summary": "Your own personal workspace that is always waiting for you. Leave your monitor, plants, and personal items on your desk knowing it is reserved exclusively for you. The best of both worlds -- your own "
+          },
+          "priceMonthly": "$399/mo",
+          "includes": {
+            "processed": "<ul><li>24/7 access</li><li>Your own permanent desk</li><li>Lockable storage cabinet</li><li>High-speed WiFi and ethernet</li><li>5 hours of meeting room time per month</li><li>Unlimited coffee, tea, and snacks</li><li>Print and scan access</li><li>Business address for mail</li></ul>",
+            "summary": "24/7 accessYour own permanent deskLockable storage cabinetHigh-speed WiFi and ethernet5 hours of meeting room time per monthUnlimited coffee, tea, and snacksPrint and scan accessBusiness address for m"
+          },
+          "featured": true,
+          "idealFor": "Full-time Remote Professionals",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=800&q=80",
+            "alt": "Dedicated desk workspace setup",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodePlan",
+          "id": "plan-office",
+          "title": "Private Office",
+          "path": "/plans/private-office",
+          "body": {
+            "processed": "<p>A lockable private office for teams of 2 to 8 people. Enjoy the privacy and focus of your own space while remaining connected to the Hive Works community. Custom-furnished to your specifications.</p>",
+            "summary": "A lockable private office for teams of 2 to 8 people. Enjoy the privacy and focus of your own space while remaining connected to the Hive Works community. Custom-furnished to your specifications."
+          },
+          "priceMonthly": "From $800/mo",
+          "includes": {
+            "processed": "<ul><li>24/7 access with private key</li><li>Furnished and customizable office</li><li>Dedicated WiFi network</li><li>10 hours of meeting room time per month</li><li>All Hot Desk and Dedicated Desk perks</li><li>Company signage on door</li><li>Phone booth access</li></ul>",
+            "summary": "24/7 access with private keyFurnished and customizable officeDedicated WiFi network10 hours of meeting room time per monthAll Hot Desk and Dedicated Desk perksCompany signage on doorPhone booth access"
+          },
+          "featured": false,
+          "idealFor": "Small Teams & Startups",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
+            "alt": "Private office space for teams",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

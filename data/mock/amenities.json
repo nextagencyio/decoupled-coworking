@@ -1,0 +1,123 @@
+{
+  "data": {
+    "nodeAmenities": {
+      "__typename": "NodeAmenityConnection",
+      "nodes": [
+        {
+          "__typename": "NodeAmenity",
+          "id": "amenity-meeting",
+          "title": "Meeting Rooms",
+          "path": "/amenities/meeting-rooms",
+          "body": {
+            "processed": "<p>Eight bookable meeting rooms of various sizes, each equipped with 4K displays, video conferencing systems, and whiteboard walls. From intimate 4-person huddle rooms to a 20-person boardroom, we have the right space for every conversation.</p><h2>Room Options</h2><ul><li><strong>Huddle Rooms (4):</strong> 2-4 people, perfect for quick meetings</li><li><strong>Conference Rooms (3):</strong> 6-10 people, ideal for team meetings</li><li><strong>Boardroom (1):</strong> Up to 20 people, full AV setup</li></ul><p>Book rooms by the hour through our member app. Included hours vary by plan.</p>",
+            "summary": "Eight bookable meeting rooms of various sizes, each equipped with 4K displays, video conferencing systems, and whiteboard walls. From intimate 4-person huddle rooms to a 20-person boardroom, we have t"
+          },
+          "amenityCategory": "Workspace",
+          "availability": "All members, bookable via app",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+            "alt": "Modern meeting room with display screen",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeAmenity",
+          "id": "amenity-kitchen",
+          "title": "Kitchen & Lounge",
+          "path": "/amenities/kitchen-lounge",
+          "body": {
+            "processed": "<p>Our fully stocked kitchen is the heart of the Hive. Grab a fresh cup of locally roasted coffee, heat up your lunch, or take a break on the lounge sofas. It is also where some of the best spontaneous conversations and collaborations happen.</p><h2>Always Available</h2><ul><li>Locally roasted drip coffee and espresso</li><li>Selection of teas and sparkling water</li><li>Full-size refrigerator and microwave</li><li>Dishwasher</li><li>Complimentary snacks (fruit, granola bars, nuts)</li></ul>",
+            "summary": "Our fully stocked kitchen is the heart of the Hive. Grab a fresh cup of locally roasted coffee, heat up your lunch, or take a break on the lounge sofas. It is also where some of the best spontaneous c"
+          },
+          "amenityCategory": "Hospitality",
+          "availability": "All members during access hours",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+            "alt": "Modern kitchen and lounge area",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeAmenity",
+          "id": "amenity-event-space",
+          "title": "Event Space",
+          "path": "/amenities/event-space",
+          "body": {
+            "processed": "<p>A versatile 1,200 sq ft event space that transforms from workshop classroom to networking venue to product launch party. Equipped with a stage, projector, sound system, and flexible seating for up to 80 people.</p><h2>Popular Uses</h2><ul><li>Tech meetups and hackathons</li><li>Startup pitch nights</li><li>Workshops and training sessions</li><li>Product launches and demos</li><li>Networking events</li></ul><p>Members receive discounted rates. Contact us for pricing and availability.</p>",
+            "summary": "A versatile 1,200 sq ft event space that transforms from workshop classroom to networking venue to product launch party. Equipped with a stage, projector, sound system, and flexible seating for up to "
+          },
+          "amenityCategory": "Events",
+          "availability": "Bookable by members and non-members",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+            "alt": "Event space setup for a presentation",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

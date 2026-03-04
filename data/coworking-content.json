@@ -1,0 +1,279 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Coworking space landing page with hero, stats, and call to action",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "plan",
+      "label": "Membership Plan",
+      "description": "Coworking membership plan",
+      "body": true,
+      "fields": [
+        { "id": "price_monthly", "label": "Monthly Price", "type": "string" },
+        { "id": "includes", "label": "Includes", "type": "text" },
+        { "id": "featured", "label": "Featured", "type": "bool" },
+        { "id": "ideal_for", "label": "Ideal For", "type": "string" },
+        { "id": "image", "label": "Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "amenity",
+      "label": "Amenity",
+      "description": "Space amenity or feature",
+      "body": true,
+      "fields": [
+        { "id": "amenity_category", "label": "Category", "type": "string" },
+        { "id": "availability", "label": "Availability", "type": "string" },
+        { "id": "image", "label": "Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "event",
+      "label": "Community Event",
+      "description": "Coworking community event",
+      "body": true,
+      "fields": [
+        { "id": "event_date", "label": "Event Date", "type": "datetime" },
+        { "id": "end_date", "label": "End Date", "type": "datetime" },
+        { "id": "location", "label": "Location", "type": "string" },
+        { "id": "open_to_public", "label": "Open to Public", "type": "bool" },
+        { "id": "image", "label": "Event Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content page",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "description": "A key statistic with number and label",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "taxonomies": [],
+  "content": [
+    {
+      "id": "stat-members",
+      "type": "paragraph.stat_item",
+      "values": { "number": "350+", "label": "Members" }
+    },
+    {
+      "id": "stat-desks",
+      "type": "paragraph.stat_item",
+      "values": { "number": "120", "label": "Workstations" }
+    },
+    {
+      "id": "stat-rooms",
+      "type": "paragraph.stat_item",
+      "values": { "number": "8", "label": "Meeting Rooms" }
+    },
+    {
+      "id": "stat-events",
+      "type": "paragraph.stat_item",
+      "values": { "number": "50+", "label": "Annual Events" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Hive Works Coworking",
+        "hero_title": "Work Better, Together",
+        "hero_subtitle": "Hive Works Coworking Space",
+        "hero_description": "<p>More than just a desk. Hive Works is a vibrant community of freelancers, startups, and remote professionals who thrive on collaboration, creativity, and connection. Flexible plans, premium amenities, and a culture that fuels your best work.</p>",
+        "stats_items": ["@stat-members", "@stat-desks", "@stat-rooms", "@stat-events"],
+        "featured_items_title": "Membership Plans",
+        "cta_title": "See the Space for Yourself",
+        "cta_description": "<p>Book a free day pass or schedule a tour. Experience why hundreds of professionals choose Hive Works as their workspace.</p>",
+        "cta_primary": "Get a Free Day Pass",
+        "cta_secondary": "Schedule a Tour"
+      }
+    },
+    {
+      "id": "plan-hot-desk",
+      "type": "node.plan",
+      "path": "/plans/hot-desk",
+      "values": {
+        "title": "Hot Desk",
+        "body": "<p>Flexible, first-come seating in our open workspace. Perfect for freelancers and remote workers who need a professional environment without a fixed commitment. Grab any open desk, plug in, and get to work.</p>",
+        "price_monthly": "$199/mo",
+        "includes": "<ul><li>Access during business hours (8 AM - 6 PM, Mon-Fri)</li><li>High-speed WiFi</li><li>Unlimited coffee, tea, and filtered water</li><li>2 hours of meeting room time per month</li><li>Access to community events</li><li>Mail handling</li></ul>",
+        "featured": false,
+        "ideal_for": "Freelancers & Remote Workers",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+          "alt": "Open coworking space with hot desks"
+        }
+      }
+    },
+    {
+      "id": "plan-dedicated",
+      "type": "node.plan",
+      "path": "/plans/dedicated-desk",
+      "values": {
+        "title": "Dedicated Desk",
+        "body": "<p>Your own personal workspace that is always waiting for you. Leave your monitor, plants, and personal items on your desk knowing it is reserved exclusively for you. The best of both worlds -- your own space within a community.</p>",
+        "price_monthly": "$399/mo",
+        "includes": "<ul><li>24/7 access</li><li>Your own permanent desk</li><li>Lockable storage cabinet</li><li>High-speed WiFi and ethernet</li><li>5 hours of meeting room time per month</li><li>Unlimited coffee, tea, and snacks</li><li>Print and scan access</li><li>Business address for mail</li></ul>",
+        "featured": true,
+        "ideal_for": "Full-time Remote Professionals",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=800&q=80",
+          "alt": "Dedicated desk workspace setup"
+        }
+      }
+    },
+    {
+      "id": "plan-office",
+      "type": "node.plan",
+      "path": "/plans/private-office",
+      "values": {
+        "title": "Private Office",
+        "body": "<p>A lockable private office for teams of 2 to 8 people. Enjoy the privacy and focus of your own space while remaining connected to the Hive Works community. Custom-furnished to your specifications.</p>",
+        "price_monthly": "From $800/mo",
+        "includes": "<ul><li>24/7 access with private key</li><li>Furnished and customizable office</li><li>Dedicated WiFi network</li><li>10 hours of meeting room time per month</li><li>All Hot Desk and Dedicated Desk perks</li><li>Company signage on door</li><li>Phone booth access</li></ul>",
+        "featured": false,
+        "ideal_for": "Small Teams & Startups",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
+          "alt": "Private office space for teams"
+        }
+      }
+    },
+    {
+      "id": "amenity-meeting",
+      "type": "node.amenity",
+      "path": "/amenities/meeting-rooms",
+      "values": {
+        "title": "Meeting Rooms",
+        "body": "<p>Eight bookable meeting rooms of various sizes, each equipped with 4K displays, video conferencing systems, and whiteboard walls. From intimate 4-person huddle rooms to a 20-person boardroom, we have the right space for every conversation.</p><h2>Room Options</h2><ul><li><strong>Huddle Rooms (4):</strong> 2-4 people, perfect for quick meetings</li><li><strong>Conference Rooms (3):</strong> 6-10 people, ideal for team meetings</li><li><strong>Boardroom (1):</strong> Up to 20 people, full AV setup</li></ul><p>Book rooms by the hour through our member app. Included hours vary by plan.</p>",
+        "amenity_category": "Workspace",
+        "availability": "All members, bookable via app",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+          "alt": "Modern meeting room with display screen"
+        }
+      }
+    },
+    {
+      "id": "amenity-kitchen",
+      "type": "node.amenity",
+      "path": "/amenities/kitchen-lounge",
+      "values": {
+        "title": "Kitchen & Lounge",
+        "body": "<p>Our fully stocked kitchen is the heart of the Hive. Grab a fresh cup of locally roasted coffee, heat up your lunch, or take a break on the lounge sofas. It is also where some of the best spontaneous conversations and collaborations happen.</p><h2>Always Available</h2><ul><li>Locally roasted drip coffee and espresso</li><li>Selection of teas and sparkling water</li><li>Full-size refrigerator and microwave</li><li>Dishwasher</li><li>Complimentary snacks (fruit, granola bars, nuts)</li></ul>",
+        "amenity_category": "Hospitality",
+        "availability": "All members during access hours",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+          "alt": "Modern kitchen and lounge area"
+        }
+      }
+    },
+    {
+      "id": "amenity-event-space",
+      "type": "node.amenity",
+      "path": "/amenities/event-space",
+      "values": {
+        "title": "Event Space",
+        "body": "<p>A versatile 1,200 sq ft event space that transforms from workshop classroom to networking venue to product launch party. Equipped with a stage, projector, sound system, and flexible seating for up to 80 people.</p><h2>Popular Uses</h2><ul><li>Tech meetups and hackathons</li><li>Startup pitch nights</li><li>Workshops and training sessions</li><li>Product launches and demos</li><li>Networking events</li></ul><p>Members receive discounted rates. Contact us for pricing and availability.</p>",
+        "amenity_category": "Events",
+        "availability": "Bookable by members and non-members",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+          "alt": "Event space setup for a presentation"
+        }
+      }
+    },
+    {
+      "id": "event-pitch",
+      "type": "node.event",
+      "path": "/events/startup-pitch-night",
+      "values": {
+        "title": "Startup Pitch Night",
+        "body": "<p>Five early-stage startups pitch their ideas to a panel of local investors, mentors, and fellow entrepreneurs. Each founder gets 5 minutes to present followed by 3 minutes of Q&A. Networking with appetizers and drinks follows the pitches.</p><h2>Why Attend</h2><ul><li>Discover innovative local startups</li><li>Network with investors and founders</li><li>Get inspired by entrepreneurial energy</li><li>Enjoy complimentary food and drinks</li></ul>",
+        "event_date": "2026-04-10T18:00:00",
+        "end_date": "2026-04-10T21:00:00",
+        "location": "Hive Works Event Space",
+        "open_to_public": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80",
+          "alt": "Startup pitch presentation"
+        }
+      }
+    },
+    {
+      "id": "event-workshop",
+      "type": "node.event",
+      "path": "/events/ai-tools-workshop",
+      "values": {
+        "title": "AI Tools for Productivity Workshop",
+        "body": "<p>A hands-on workshop exploring the latest AI tools that can supercharge your workflow. Learn practical applications of AI for writing, coding, design, data analysis, and project management. Bring your laptop and leave with actionable skills you can use immediately.</p><h2>Topics Covered</h2><ul><li>AI writing assistants for content creation</li><li>Code generation and debugging with AI</li><li>Automated data analysis workflows</li><li>AI-powered design tools</li><li>Prompt engineering best practices</li></ul>",
+        "event_date": "2026-04-22T14:00:00",
+        "end_date": "2026-04-22T17:00:00",
+        "location": "Hive Works Boardroom",
+        "open_to_public": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
+          "alt": "Workshop with laptops and participants"
+        }
+      }
+    },
+    {
+      "id": "event-happy-hour",
+      "type": "node.event",
+      "path": "/events/monthly-happy-hour",
+      "values": {
+        "title": "Monthly Member Happy Hour",
+        "body": "<p>Unwind, connect, and celebrate another month of great work with your fellow Hive members. Local craft beer, wine, and non-alcoholic options provided. This is where some of the best collaborations at Hive Works have started.</p><p>Every last Friday of the month. No RSVP needed, just show up and be social!</p>",
+        "event_date": "2026-04-24T17:00:00",
+        "end_date": "2026-04-24T19:00:00",
+        "location": "Hive Works Kitchen & Lounge",
+        "open_to_public": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+          "alt": "Coworking members socializing"
+        }
+      }
+    },
+    {
+      "id": "page-about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Hive Works",
+        "body": "<p>Hive Works was founded in 2019 by two remote workers who were tired of coffee shops and home offices. They envisioned a workspace that combined the productivity of an office with the energy of a startup and the warmth of a community center.</p><h2>Our Mission</h2><p>To create the most productive, connected, and inspiring workspace for independent professionals, remote workers, and small teams in the region.</p><h2>The Space</h2><p>Located in a beautifully renovated industrial warehouse, Hive Works spans 15,000 square feet across two floors. Natural light floods through original skylights, exposed brick walls provide character, and modern furnishings ensure comfort throughout the day.</p><h2>Community First</h2><p>We are not just a workspace provider. We actively cultivate community through events, introductions, collaboration opportunities, and a culture of mutual support.</p>"
+      }
+    },
+    {
+      "id": "page-faq",
+      "type": "node.page",
+      "path": "/faq",
+      "values": {
+        "title": "Frequently Asked Questions",
+        "body": "<h2>Can I try the space before committing?</h2><p>Absolutely. We offer a free day pass so you can experience Hive Works firsthand. Just sign up on our website or drop by during business hours.</p><h2>What is the minimum commitment?</h2><p>All plans are month-to-month with 30 days notice to cancel. No long-term contracts required.</p><h2>Is parking available?</h2><p>Yes, we have a dedicated parking lot with 40 spaces and street parking nearby. Bicycle racks and a repair station are also available.</p><h2>Do you have reliable internet?</h2><p>We run redundant 1 Gbps fiber connections with enterprise-grade mesh WiFi covering the entire space. Average speeds exceed 500 Mbps.</p><h2>Can I bring guests?</h2><p>Dedicated Desk and Private Office members can bring guests. Hot Desk members can purchase guest day passes at a discounted rate.</p>"
+      }
+    }
+  ]
+}

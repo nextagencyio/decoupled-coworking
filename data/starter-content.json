@@ -1,0 +1,396 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Landing page",
+      "fields": [
+        {
+          "id": "hero_title",
+          "label": "Hero Title",
+          "type": "string"
+        },
+        {
+          "id": "hero_subtitle",
+          "label": "Hero Subtitle",
+          "type": "string"
+        },
+        {
+          "id": "hero_description",
+          "label": "Hero Description",
+          "type": "text"
+        },
+        {
+          "id": "features_items",
+          "label": "Feature Items",
+          "type": "paragraph(feature_item)[]"
+        },
+        {
+          "id": "cta_title",
+          "label": "CTA Title",
+          "type": "string"
+        },
+        {
+          "id": "cta_description",
+          "label": "CTA Description",
+          "type": "text"
+        },
+        {
+          "id": "cta_primary",
+          "label": "CTA Primary",
+          "type": "string"
+        },
+        {
+          "id": "cta_secondary",
+          "label": "CTA Secondary",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "bundle": "plan",
+      "label": "Plan",
+      "description": "Coworking plan",
+      "body": true,
+      "fields": [
+        {
+          "id": "price_monthly",
+          "label": "Monthly Price",
+          "type": "string"
+        },
+        {
+          "id": "includes",
+          "label": "Includes",
+          "type": "text"
+        },
+        {
+          "id": "featured",
+          "label": "Featured",
+          "type": "bool"
+        },
+        {
+          "id": "image",
+          "label": "Image",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "bundle": "amenity",
+      "label": "Amenity",
+      "description": "Space amenity",
+      "body": true,
+      "fields": [
+        {
+          "id": "image",
+          "label": "Image",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "bundle": "event",
+      "label": "Event",
+      "description": "Community event",
+      "body": true,
+      "fields": [
+        {
+          "id": "event_date",
+          "label": "Event Date",
+          "type": "datetime"
+        },
+        {
+          "id": "location",
+          "label": "Location",
+          "type": "string"
+        },
+        {
+          "id": "image",
+          "label": "Image",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static page",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "feature_item",
+      "label": "Feature Item",
+      "fields": [
+        {
+          "id": "icon",
+          "label": "Icon",
+          "type": "string"
+        },
+        {
+          "id": "title",
+          "label": "Title",
+          "type": "string!"
+        },
+        {
+          "id": "description",
+          "label": "Description",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "f1",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "wifi",
+        "title": "Gigabit Internet",
+        "description": "Enterprise-grade fiber internet with dedicated bandwidth and backup connectivity."
+      }
+    },
+    {
+      "id": "f2",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "coffee",
+        "title": "Craft Coffee Bar",
+        "description": "Complimentary specialty coffee, teas, and cold brew on tap throughout the day."
+      }
+    },
+    {
+      "id": "f3",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "users",
+        "title": "Vibrant Community",
+        "description": "600+ members from startups, freelancers, and remote teams creating together."
+      }
+    },
+    {
+      "id": "f4",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "calendar",
+        "title": "Events & Workshops",
+        "description": "Weekly networking events, skill-sharing workshops, and founder talks."
+      }
+    },
+    {
+      "id": "f5",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "lock",
+        "title": "24/7 Secure Access",
+        "description": "Keycard access with 24/7 security monitoring and on-site staff during business hours."
+      }
+    },
+    {
+      "id": "f6",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "printer",
+        "title": "Full Office Services",
+        "description": "High-speed printers, mail handling, phone booths, and meeting room booking."
+      }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "The Hive Coworking",
+        "hero_title": "Where Ideas Take Flight",
+        "hero_subtitle": "The Hive Coworking",
+        "hero_description": "<p>Premium coworking spaces designed for productivity, collaboration, and community. Your office, reimagined.</p>",
+        "features_items": [
+          "@f1",
+          "@f2",
+          "@f3",
+          "@f4",
+          "@f5",
+          "@f6"
+        ],
+        "cta_title": "Find Your Perfect Workspace",
+        "cta_description": "<p>Tour our space and see why 600+ professionals call The Hive home. Free day pass available.</p>",
+        "cta_primary": "Book a Tour",
+        "cta_secondary": "View Plans"
+      }
+    },
+    {
+      "id": "plan-flex",
+      "type": "node.plan",
+      "path": "/plans/flex-desk",
+      "values": {
+        "title": "Flex Desk",
+        "body": "<p>Perfect for freelancers and remote workers who need flexible access. Grab any available hot desk in our open workspace.</p>",
+        "price_monthly": "$199",
+        "includes": "<ul><li>10 days/month hot desk access</li><li>Gigabit WiFi</li><li>Coffee & tea included</li><li>2 hours meeting room/month</li><li>Community events access</li></ul>",
+        "featured": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+          "alt": "Flex desk",
+          "title": "Flex Desk"
+        }
+      }
+    },
+    {
+      "id": "plan-dedicated",
+      "type": "node.plan",
+      "path": "/plans/dedicated-desk",
+      "values": {
+        "title": "Dedicated Desk",
+        "body": "<p>Your own permanent desk in our open workspace. Leave your setup ready and come back to the same spot every day.</p>",
+        "price_monthly": "$399",
+        "includes": "<ul><li>Unlimited 24/7 access</li><li>Permanent desk with storage</li><li>Gigabit WiFi</li><li>5 hours meeting room/month</li><li>Mail handling</li><li>Printing credits</li></ul>",
+        "featured": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80",
+          "alt": "Dedicated desk",
+          "title": "Dedicated Desk"
+        }
+      }
+    },
+    {
+      "id": "plan-office",
+      "type": "node.plan",
+      "path": "/plans/private-office",
+      "values": {
+        "title": "Private Office",
+        "body": "<p>Lockable private offices for teams of 2-10. Fully furnished with standing desks, whiteboards, and soundproofing.</p>",
+        "price_monthly": "$899",
+        "includes": "<ul><li>Private lockable office</li><li>24/7 access</li><li>Dedicated internet line</li><li>10 hours meeting room/month</li><li>Company signage</li><li>Mail & package handling</li><li>Phone booth access</li></ul>",
+        "featured": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80",
+          "alt": "Private office",
+          "title": "Private Office"
+        }
+      }
+    },
+    {
+      "id": "amenity-meeting",
+      "type": "node.amenity",
+      "path": "/amenities/meeting-rooms",
+      "values": {
+        "title": "Meeting Rooms",
+        "body": "<p>Six fully equipped meeting rooms seating 4-20 people. Each room features 4K displays, video conferencing, whiteboards, and soundproofing. Book instantly via our app.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
+          "alt": "Meeting room",
+          "title": "Meeting Rooms"
+        }
+      }
+    },
+    {
+      "id": "amenity-kitchen",
+      "type": "node.amenity",
+      "path": "/amenities/kitchen-lounge",
+      "values": {
+        "title": "Kitchen & Lounge",
+        "body": "<p>Full kitchen with refrigerators, microwave, dishwasher, and complimentary snacks. The lounge area features comfortable seating, a pool table, and a library corner.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+          "alt": "Kitchen and lounge",
+          "title": "Kitchen & Lounge"
+        }
+      }
+    },
+    {
+      "id": "amenity-podcast",
+      "type": "node.amenity",
+      "path": "/amenities/podcast-studio",
+      "values": {
+        "title": "Podcast Studio",
+        "body": "<p>Professional-grade podcast and recording studio with acoustic treatment, quality microphones, mixers, and editing software. Available for booking by all members.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80",
+          "alt": "Podcast studio",
+          "title": "Podcast Studio"
+        }
+      }
+    },
+    {
+      "id": "amenity-wellness",
+      "type": "node.amenity",
+      "path": "/amenities/wellness-room",
+      "values": {
+        "title": "Wellness Room",
+        "body": "<p>A quiet space for meditation, nursing mothers, prayer, or simply taking a break. Equipped with comfortable seating, soft lighting, and sound machine.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=80",
+          "alt": "Wellness room",
+          "title": "Wellness Room"
+        }
+      }
+    },
+    {
+      "id": "event-pitch",
+      "type": "node.event",
+      "path": "/events/pitch-night",
+      "values": {
+        "title": "Startup Pitch Night",
+        "body": "<p>Monthly event where member startups pitch to a panel of investors and mentors. Five-minute pitches followed by Q&A and networking over drinks.</p>",
+        "event_date": "2026-04-10T18:00:00",
+        "location": "The Hive Main Hall",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+          "alt": "Pitch night",
+          "title": "Pitch Night"
+        }
+      }
+    },
+    {
+      "id": "event-ai",
+      "type": "node.event",
+      "path": "/events/ai-workshop",
+      "values": {
+        "title": "AI Tools for Freelancers",
+        "body": "<p>Hands-on workshop exploring practical AI tools that save time and boost productivity. From writing assistants to design tools, learn what works and what's hype.</p>",
+        "event_date": "2026-04-24T14:00:00",
+        "location": "Workshop Room A",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
+          "alt": "AI workshop",
+          "title": "AI Workshop"
+        }
+      }
+    },
+    {
+      "id": "event-social",
+      "type": "node.event",
+      "path": "/events/friday-social",
+      "values": {
+        "title": "Friday Social Hour",
+        "body": "<p>Wind down the week with complimentary craft beer and snacks. Meet fellow members, share wins, and build connections in a relaxed atmosphere.</p>",
+        "event_date": "2026-04-18T17:00:00",
+        "location": "Rooftop Terrace",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
+          "alt": "Social hour",
+          "title": "Friday Social"
+        }
+      }
+    },
+    {
+      "id": "about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About The Hive",
+        "body": "<p>The Hive Coworking opened in 2019 with a mission to create the ultimate workspace for independent professionals and growing teams.</p><h2>Our Vision</h2><p>We believe the future of work is flexible, collaborative, and human-centered. The Hive provides the infrastructure, community, and inspiration to do your best work.</p><h2>The Space</h2><p>20,000 sq ft across three floors in the heart of downtown. Natural light, biophilic design, and ergonomic furniture create an environment that energizes and focuses.</p>"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "node.page",
+      "path": "/faq",
+      "values": {
+        "title": "FAQ",
+        "body": "<h2>Can I try before I commit?</h2><p>Yes! Book a free day pass to experience The Hive firsthand.</p><h2>Is parking available?</h2><p>We have a dedicated parking garage with monthly passes and daily rates.</p><h2>Can I use the space on weekends?</h2><p>Dedicated Desk and Private Office members have 24/7 access including weekends.</p><h2>Do you offer virtual offices?</h2><p>Yes, starting at $49/month for a business address, mail handling, and meeting room credits.</p>"
+      }
+    }
+  ]
+}
