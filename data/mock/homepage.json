@@ -19,28 +19,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-members",
               "title": "",
-              "number": "350+",
+              "number": "350+", "value": "350+",
               "label": "Members"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-desks",
               "title": "",
-              "number": "120",
+              "number": "120", "value": "120",
               "label": "Workstations"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-rooms",
               "title": "",
-              "number": "8",
+              "number": "8", "value": "8",
               "label": "Meeting Rooms"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-events",
               "title": "",
-              "number": "50+",
+              "number": "50+", "value": "50+",
               "label": "Annual Events"
             }
           ],
