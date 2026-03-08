@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import PlanCard from '../components/PlanCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Plans | The Nexus Hub',
