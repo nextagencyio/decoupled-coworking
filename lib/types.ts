@@ -57,23 +57,6 @@ export interface DrupalPage extends DrupalNode {
   }
 }
 
-export interface DrupalHomepage extends DrupalNode {
-  heroTitle?: string
-  heroSubtitle?: string
-  heroDescription?: {
-    processed: string
-  }
-  featuresTitle?: string
-  featuresSubtitle?: string
-  featuresItems?: DrupalFeature[]
-  ctaTitle?: string
-  ctaDescription?: {
-    processed: string
-  }
-  ctaPrimary?: string
-  ctaSecondary?: string
-}
-
 export interface DrupalFeature {
   id: string
   title: string
@@ -81,6 +64,24 @@ export interface DrupalFeature {
     processed: string
   }
   icon?: string
+}
+
+export interface DrupalHomepage {
+  id: string
+  title: string
+  path?: string
+  heroTitle?: string
+  heroSubtitle?: string
+  heroDescription?: {
+    processed: string
+  }
+  featuresItems?: DrupalFeature[]
+  ctaTitle?: string
+  ctaDescription?: {
+    processed: string
+  }
+  ctaPrimary?: string
+  ctaSecondary?: string
 }
 
 export interface HomepageData {
@@ -97,9 +98,8 @@ export interface DrupalPlan {
   path?: string
   body?: { processed: string; summary?: string }
   priceMonthly?: string
-  includes?: { processed: string; summary?: string }
-  featured?: string
-  idealFor?: string
+  includes?: { processed: string }
+  featured?: boolean
   image?: { url: string; alt: string; width?: number; height?: number; variations?: { name: string; url: string; width: number; height: number }[] }
 }
 
@@ -114,8 +114,6 @@ export interface DrupalAmenity {
   title: string
   path?: string
   body?: { processed: string; summary?: string }
-  amenityCategory?: string
-  availability?: string
   image?: { url: string; alt: string; width?: number; height?: number; variations?: { name: string; url: string; width: number; height: number }[] }
 }
 
@@ -131,9 +129,7 @@ export interface DrupalEvent {
   path?: string
   body?: { processed: string; summary?: string }
   eventDate?: { timestamp: string }
-  endDate?: { timestamp: string }
   location?: string
-  openToPublic?: string
   image?: { url: string; alt: string; width?: number; height?: number; variations?: { name: string; url: string; width: number; height: number }[] }
 }
 

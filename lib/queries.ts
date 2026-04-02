@@ -1,78 +1,6 @@
 // Tagged template that returns the query string
 const gql = (strings: TemplateStringsArray, ...values: any[]) => strings.reduce((a, s, i) => a + s + (values[i] || ''), '')
 
-export const GET_ARTICLE_TEASERS = gql`
-  query GetArticleTeasers($first: Int = 10) {
-    nodeArticles(first: $first, sortKey: CREATED_AT) {
-      nodes {
-        id
-        title
-        path
-        created {
-          timestamp
-        }
-        changed {
-          timestamp
-        }
-        ... on NodeArticle {
-          body {
-            processed
-            summary
-          }
-          image {
-            url
-            alt
-            width
-            height
-            variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-              name
-              url
-              width
-              height
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-export const GET_ARTICLE_BY_PATH = gql`
-  query GetArticleByPath($path: String!) {
-    route(path: $path) {
-      ... on RouteInternal {
-        entity {
-          ... on NodeArticle {
-            id
-            title
-            body {
-              processed
-            }
-            created {
-              timestamp
-            }
-            changed {
-              timestamp
-            }
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
 export const GET_HOMEPAGE_DATA = gql`
   query GetHomepageData {
     nodeHomepages(first: 1) {
@@ -82,11 +10,17 @@ export const GET_HOMEPAGE_DATA = gql`
         path
         heroTitle
         heroSubtitle
-        heroDescription { processed summary }
-        statsItems { ... on ParagraphStatItem { id title description { processed } icon } }
-        featuredItemsTitle
+        heroDescription { processed }
+        featuresItems {
+          ... on ParagraphFeatureItem {
+            id
+            title
+            description { processed }
+            icon
+          }
+        }
         ctaTitle
-        ctaDescription { processed summary }
+        ctaDescription { processed }
         ctaPrimary
         ctaSecondary
       }
@@ -100,38 +34,15 @@ export const GET_NODE_BY_PATH = gql`
       ... on RouteInternal {
         entity {
           ... on NodePage {
+            __typename
             id
             title
             body {
               processed
-            }
-          }
-          ... on NodeArticle {
-            id
-            title
-            body {
-              processed
-            }
-            created {
-              timestamp
-            }
-            changed {
-              timestamp
-            }
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
             }
           }
           ... on NodeHomepage {
+            __typename
             id
             title
             heroTitle
@@ -139,8 +50,6 @@ export const GET_NODE_BY_PATH = gql`
             heroDescription {
               processed
             }
-            featuresTitle
-            featuresSubtitle
             featuresItems {
               ... on ParagraphFeatureItem {
                 id
@@ -157,6 +66,35 @@ export const GET_NODE_BY_PATH = gql`
             }
             ctaPrimary
             ctaSecondary
+          }
+          ... on NodePlan {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            priceMonthly
+            includes { processed }
+            featured
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+          }
+          ... on NodeAmenity {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+          }
+          ... on NodeEvent {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            eventDate { timestamp }
+            location
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -175,9 +113,8 @@ export const GET_PLANS = gql`
         ... on NodePlan {
           body { processed summary }
           priceMonthly
-          includes { processed summary }
+          includes { processed }
           featured
-          idealFor
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
         }
       }
@@ -194,12 +131,11 @@ export const GET_PLAN_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          priceMonthly
-          includes { processed summary }
-          featured
-          idealFor
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            priceMonthly
+            includes { processed }
+            featured
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -217,8 +153,6 @@ export const GET_AMENITIES = gql`
         created { timestamp }
         ... on NodeAmenity {
           body { processed summary }
-          amenityCategory
-          availability
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
         }
       }
@@ -235,10 +169,8 @@ export const GET_AMENITY_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          amenityCategory
-          availability
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -257,9 +189,7 @@ export const GET_EVENTS = gql`
         ... on NodeEvent {
           body { processed summary }
           eventDate { timestamp }
-          endDate { timestamp }
           location
-          openToPublic
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
         }
       }
@@ -276,12 +206,10 @@ export const GET_EVENT_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          eventDate { timestamp }
-          endDate { timestamp }
-          location
-          openToPublic
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            eventDate { timestamp }
+            location
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
