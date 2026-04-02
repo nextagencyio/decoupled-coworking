@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 async function getPlans() {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_PLANS, { first: 50 })
+    const data = await client.raw(GET_PLANS, { first: 50 })
     return data?.nodePlans?.nodes || []
   } catch (error) {
     console.error('Error fetching plans:', error)
@@ -62,7 +62,7 @@ export default async function PlansPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {items.map((item) => (
+              {items.map((item: any) => (
                 <PlanCard key={item.id} item={item} />
               ))}
             </div>
