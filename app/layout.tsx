@@ -1,5 +1,4 @@
 import './globals.css'
-import ApolloProvider from './components/providers/ApolloProvider'
 import { DemoModeBanner } from './components/DemoModeBanner'
 import { Viewport, type Metadata } from 'next'
 import { Space_Grotesk, Inter } from 'next/font/google'
@@ -76,9 +75,9 @@ export default function RootLayout({
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <body className="font-sans bg-gray-100 text-gray-900 antialiased">
         <DemoModeBanner />
-        <ApolloProvider>
+        
           {children}
-        </ApolloProvider>
+        
       </body>
     </html>
   )
